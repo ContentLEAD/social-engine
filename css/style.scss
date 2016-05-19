@@ -1,0 +1,457 @@
+$base:#ededed;
+$dark:#464646;
+$bright:aquamarine;
+$under: #FF5C7C;
+$over: #00B393 ;
+$darkblue:#003154 ;
+$yellow:#FAFF95;
+$lightwhite: rgba(255,255,255,.8);
+
+
+body{
+    background-color:$base;
+    color:$dark;
+    font-family: 'futura-pt';
+    i{
+        cursor: pointer;
+    }
+    a{
+        &:visited,&:hover{
+            text-decoration: none;
+            color:inherit
+        }
+        text-decoration: none;
+        color:inherit
+    }
+}
+
+.multi{
+    width:100px;
+    height:80px;
+    color:black;
+    z-index: 1000;
+    position: absolute;
+    background-color:$darkblue;
+    padding:5px;
+    left:-25px;
+    top:-75px;
+    display:none;
+    button{
+        margin:10px;
+    }
+}
+
+
+
+.fa-group::before, .fa-meeting::before {
+	content: "";
+}
+.fa-group::before, .fa-email::before {
+	content: "";
+}
+.fa-group::before, .fa-report::before, .fa-report::before {
+	content: "";
+}
+//NEW BOARD
+.holder{
+    height:20px;
+    background-color:blue;
+    display:none;
+}
+.options{
+    padding:10px 0px;
+    &:a{
+        margin-top:5px;
+    }
+}
+.fa{
+    line-height: inherit;
+}
+.fb{
+    cursor: pointer;
+}
+.badge{
+    margin-top: 10px;
+}
+#stop_gap{
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color:rgba(200,0,0,.9);
+    z-index:5000;
+    color:black;
+    .container{
+        margin-top:50px;
+    }
+    tr{
+        background-color:white;
+    }
+}
+.notifier{
+    background-color: $darkblue!important;
+}
+.task{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    &:hover{
+        background-color:$darkblue;
+        color:$yellow;
+    }
+    &-reader{
+        display:none;
+    }
+}
+.overdue{
+    background-color: $under;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left:15px!important;
+    padding-right:15px!important;
+    cursor: pointer;
+}
+.close-task{
+    cursor: pointer;
+}
+
+.new{
+    &-task{
+        cursor: pointer;
+    }
+    &-item{
+        margin-top:5px;
+        display:block;
+        cursor: pointer;
+        &-info{
+            height:400px;
+            background-color:rgba(235,235,235,.4);
+            display:none;
+            clear:both;
+        }
+        &-counter{
+            background-color: $darkblue;
+            color:white;
+            padding: 3px 0px;
+            text-align: center;
+        }
+        &-action{
+            padding: 3px;
+        }
+        &-network{
+            padding: 6px;
+            color:white;
+        }
+        &-button{
+            padding: 6px;
+            color:white;
+        }
+    }
+    &-client{
+        width:100%;
+        background-color: $base;
+        padding:5px;
+        color:$dark;
+        border-radius:1px;
+        font-family: 'futura-pt';
+        margin-bottom:2px;   
+        &-order{
+            height:400px;
+            background-color:rgba(235,235,235,.4);
+            margin-bottom:2px;
+            display:none;
+            clear:both;
+        }
+    }
+}
+
+
+//END NEW BOARD
+
+
+
+
+
+
+#backlog{
+    margin:auto;
+    font-size: 20px;
+}
+.backlog{
+    background-color:dimgrey !important;
+}
+#login-box{
+    width:50%;
+    margin:auto;
+    border-radius: 10px;
+    background-color:rgba(255,255,255,.8);
+    padding:20px;
+    margin-top:20px;
+    box-shadow: 0px 0px 20px grey;
+    input{
+        margin:20px 0px;
+    }
+}
+#top{
+    background-color:$darkblue;
+    width:100%;
+    padding:10px;
+    color:$yellow;
+    &-sub{
+        width:100%;
+    }
+}
+.user{
+    border: 2px solid $dark;
+    border-radius: 13px;
+    height: 25px;
+    padding:2px 10px;
+    text-align: center;
+    line-height: 20px;
+    text-transform: uppercase;
+    background-color:#000E38;
+    &-options{
+        display:none;
+        background-color:$dark;
+        a{
+            display:block;
+            padding:3px;
+            text-align:center;
+            color:white !important;
+            &:hover{
+                color:$dark!important;;
+                background-color:white;
+            }
+        }
+        padding-bottom: 10px;
+    }
+}
+.head{
+    background-color:$lightwhite;
+    padding-top:7px;
+    font-weight: 600;
+    padding-bottom:7px;
+    margin-top:20px;
+    i{
+        margin-top:2px;
+    }
+}
+.plus{
+    background-color:$over;
+    cursor: pointer;
+    color:white;
+    padding:10px 0px;
+    min-height:40px;
+    text-align:center;
+
+}
+.minus{
+    background-color:$under;
+    cursor: pointer;
+    color:white;
+    padding:10px 0px;
+    min-height:40px;
+    text-align:center;
+
+}
+.bl_count{
+    background-color:$darkblue;
+    color:white;
+    height:40px;
+    padding:10px 0px;
+    min-height:40px;
+    text-align:center;
+}
+#backlog_page{
+    min-height: 1000px;
+}
+#loading{
+    display:none;
+    position: fixed;
+    height:100%;
+    width:100%;
+    background-color: $lightwhite;
+    z-index:2000;
+    &-gif{
+        position:absolute;
+        margin-top:150px;
+        width:100%;
+        text-align:center;
+    }
+}
+#loading_dash{
+    position: fixed;
+    height:100%;
+    width:100%;
+    background-color: white;
+    z-index:2000;
+    &-gif{
+        position:absolute;
+        margin-top:150px;
+        width:100%;
+        text-align:center;
+    }
+}
+.plate{
+    background-color:rgba(255,255,255,.8);
+}
+.row{
+    margin-left:-10px;
+    margin-right:-10px;
+}
+.network{
+    font-size: 20px;
+    font-weight:600;
+}
+
+.item{
+    height:35px;
+    color:white;
+    font-size:16px;
+    margin-bottom: 10px;
+    &-options{
+        a{
+            display:block;
+            padding:3px;
+            &:hover{
+                background-color:$darkblue;
+                color:$yellow;
+            }
+        }
+    }
+}
+.client-order{
+    display:none;
+}
+.count{
+    background-color:#003D73;
+    height:100%;
+    padding-top:5px;
+}
+.commit-old{
+    padding-top:10px;
+}
+.blackout{
+    position:fixed;
+    background-color:rgba(0,0,0,.4);
+    width:100%;
+    height:100%;
+    top:0px;
+    z-index:1000;
+}
+.nyl{
+    background-color:#1BC0FF;
+}
+.action{
+    height:100%;
+    padding-top:5px;
+    border-top-left-radius: 6px;
+}
+ .over{
+    background-color:$over;
+}
+.under{
+    background-color:$under;
+
+}
+.done{
+    background-color:$base;
+}
+
+.fa{
+    font-family: inherit;
+}
+.active{
+    background-color: rgba(0,191,255,.3) !important;
+}
+#notes{
+    max-height:450px;
+    overflow-y: auto;
+}
+.widget{
+    background-color:rgba(255,255,255,.8);
+    padding:10px;
+    margin-top:20px;
+    label{
+        display:block;
+        margin-top:15px;
+        margin-bottom: 0px;
+    }
+    h2,h3{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    #avatar{
+        font-size:20px;
+        padding:20px 0px;
+    }
+    .stickies{
+        margin-top: 5px;
+        background-color:$yellow;
+        padding:10px;
+    }
+    .od-item{
+        background-color:$under;
+        padding:10px;
+        margin-top:5px;
+        display:block;
+    }
+    .sel{
+        &:hover{
+            background-color:$darkblue;
+            color:$yellow;
+        }
+        cursor:pointer;
+    }
+}
+
+.sel{
+        &:hover{
+            background-color:$darkblue;
+            color:$yellow;
+        }
+        cursor:pointer;
+    }
+.backlog{
+    color:red;
+}
+#board{
+    padding: 0px;
+    a{
+        display:block;
+        padding:10px;
+        text-align: center;
+        font-size:20px;
+        i{
+            margin-left: 10px;
+        }
+        &:hover{
+            background-color: $darkblue;
+            color:$yellow;
+        }
+    }
+}
+.toggle{
+    display:none;
+    background-color: #F4F4F4;
+}
+.client{
+    background-color:rgba(0,191,255,.1);
+    padding:5px;
+    margin:5px 0px;
+    &-block{
+        background-color:rgba(255,255,255,.8);
+        min-height:100px;
+        max-height: 500px;
+        overflow-y:auto;
+    }
+    &-search{
+        background-color:rgba(255,255,255,.8);
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    &-info{
+        cursor: pointer;
+    }
+}
+.board{
+    min-height:100px;
+}

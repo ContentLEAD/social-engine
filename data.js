@@ -1,0 +1,101 @@
+$rec = {
+    client_name:'Another Client',
+    sfid: 'wweqqweqweqwem',
+    start_date: 12382489327,
+    user_id:2,
+    prev_users:[{
+        user_id:1,
+        start_date:12312,
+        end_date:12312
+    },{
+        user_id:1,
+        start_date:12312
+    }],
+    items:[{
+        type:'rolling',
+        status:'LIVE',
+        item_id:'1223eswfsds',
+        start_amount:100,
+        network:'facebook',
+        action:'POST',
+        start_date:12312123,
+        end_date:234234,
+        period:[{
+            name:'Dec-15',
+            owed:20
+        },{
+            name:'Nov-15',
+            owed:100
+        }],
+        activity:[{
+            user_id:1,
+            date:1231231231231,
+            v:1
+        },{
+            user_id:1,
+            date:1231231231231,
+            v:1
+        },{
+            user_id:1,
+            date:1231231231231,
+            v:1
+        },{
+            date:0,
+            v:0
+        }],
+        backlog:[{
+            name:'Nov-15',
+            backlog:20
+        }]
+    },{         
+        type:'rolling',
+        item_id:'1223ewfsds',
+        status:'LIVE',         
+        start_amount:100,         
+        network:'twitter',         
+        action:'PUSH',         
+        start_date:12312123,         
+        end_date:234234,         
+        period:[{             
+            name:'Dec-15',             
+            owed:20         
+        },{             
+            name:'Nov-15',             
+            owed:3         
+        }],         
+        activity:[{             
+            user_id:1,             
+            date:0              
+        }]     
+    },{         
+        type:'rolling',
+        item_id:'1223dewfds',
+        status:'LIVE',         
+        start_amount:100,         
+        network:'twitter',         
+        action:'POST',         
+        start_date:12312123,         
+        end_date:234234,         
+        period:[{             
+            name:'Dec-15',             
+            owed:20         
+        },{             
+            name:'Nov-15',             
+            owed:100         
+        }],         
+        activity:[{             
+            user_id:1,             
+            date:0              
+        }]     
+    }]
+}
+
+
+
+{
+client_name:'Another Client',
+start_date: 12382489327,
+user_id:2,
+prev_users:[],
+items:[]
+}
